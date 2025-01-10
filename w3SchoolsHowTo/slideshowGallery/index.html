@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans m-0">
+
+    <div class="max-w-4xl relative mx-auto">
+
+        <div class="mySlides hidden animate-fade">
+            <div class="numbertext absolute top-0 text-gray-200 text-xs p-2">1 / 3</div>
+            <img src="assets/img1.jpg" class="w-full" width="651" height="492">
+            <div class="text absolute bottom-2 w-full text-center text-gray-200 text-sm p-2">Caption Text</div>
+        </div>
+
+        <div class="mySlides hidden animate-fade">
+            <div class="numbertext absolute top-0 text-gray-200 text-xs p-2">2 / 3</div>
+            <img src="assets/img2.jpg" class="w-full" width="651" height="492">
+            <div class="text absolute bottom-2 w-full text-center text-gray-200 text-sm p-2">Caption Two</div>
+        </div>
+
+        <div class="mySlides hidden animate-fade">
+            <div class="numbertext absolute top-0 text-gray-200 text-xs p-2">3 / 3</div>
+            <img src="assets/img3.jpg" class="w-full" width="651" height="492">
+            <div class="text absolute bottom-2 w-full text-center text-gray-200 text-sm p-2">Caption Three</div>
+        </div>
+
+        <a id="prevButton"
+            class="prev cursor-pointer absolute top-1/2 w-auto p-4 text-white font-bold text-lg transition ease-in-out rounded-r select-none left-0 hover:bg-black/80">❮</a>
+        <a id="nextButton"
+            class="next cursor-pointer absolute top-1/2 w-auto p-4 text-white font-bold text-lg transition ease-in-out rounded-l select-none right-0 hover:bg-black/80">❯</a>
+    </div>
+
+    <!-- Thumbnail Gallery -->
+    <div class="flex justify-center">
+        <div><img src="assets/img1.jpg" alt="Image" height="100" width="100" id="firstImage"
+                class=" hover:opacity-100 gallery">
+        </div>
+        <div><img src="assets/img2.jpg" alt="Image" height="100" width="100" id="secondImage"
+                class=" hover:opacity-100 gallery"></div>
+        <div><img src="assets/img3.jpg" alt="Image" height="100" width="100" id="thirdImage"
+                class=" hover:opacity-100 gallery">
+        </div>
+    </div>
+    <script src="./slideshowGallery.js">
+
+    </script>
+
+</body>
+
+</html>
