@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Grid</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-0 font-sans">
+    <!-- Header -->
+    <div id="myHeader" class="header text-center py-8">
+      <h1 class="text-3xl font-bold mb-2">Image Grid</h1>
+      <p class="mb-4">Click on the buttons to change the grid view.</p>
+      <div class="inline-flex space-x-2">
+        <!-- The buttons below use Tailwind classes for styling. -->
+        <button
+          class="btn border-0 outline-none py-2 px-4 bg-gray-200 cursor-pointer text-lg hover:bg-gray-300"
+          onclick="one()"
+        >
+          1
+        </button>
+        <button
+          class="btn active border-0 outline-none py-2 px-4 bg-gray-600 text-white cursor-pointer text-lg hover:bg-gray-500"
+          onclick="two()"
+        >
+          2
+        </button>
+        <button
+          class="btn border-0 outline-none py-2 px-4 bg-gray-200 cursor-pointer text-lg hover:bg-gray-300"
+          onclick="four()"
+        >
+          4
+        </button>
+      </div>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row flex flex-wrap px-1">
+      <!-- Each column starts with the "two" view (50% width) -->
+      <div class="column w-1/2 px-1">
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+      </div>
+
+      <div class="column w-1/2 px-1">
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+      </div>
+
+      <div class="column w-1/2 px-1">
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+      </div>
+
+      <div class="column w-1/2 px-1">
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+        <img src="./img/pexels-arts-1187079.jpg" alt="" class="w-full mt-2" />
+        <img
+          src="./img/pexels-francesco-ungaro-2325447.jpg"
+          alt=""
+          class="w-full mt-2"
+        />
+        <img src="./img/5.png" alt="" class="w-full mt-2" />
+      </div>
+    </div>
+
+    <script>
+      // Get all elements with the class "column"
+      var elements = document.getElementsByClassName("column");
+
+      // Change the grid view by toggling Tailwind width classes.
+      function one() {
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("w-1/2", "w-1/4");
+          elements[i].classList.add("w-full");
+        }
+      }
+
+      function two() {
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("w-full", "w-1/4");
+          elements[i].classList.add("w-1/2");
+        }
+      }
+
+      function four() {
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].classList.remove("w-full", "w-1/2");
+          elements[i].classList.add("w-1/4");
+        }
+      }
+
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = header.getElementsByClassName("active");
+          if (current.length > 0) {
+            current[0].classList.remove("bg-gray-600", "text-white");
+            current[0].classList.add("bg-gray-200");
+            current[0].classList.remove("active");
+          }
+          this.classList.remove("bg-gray-200");
+          this.classList.add("bg-gray-600", "text-white", "active");
+        });
+      }
+    </script>
+  </body>
+</html>
