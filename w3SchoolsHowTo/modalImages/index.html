@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Modal Image -->
+    <div>
+        <h2>Image Modal</h2>
+        <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default</p>
+        <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked
+            on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the
+            modal.</p>
+        <img src="./assets/img1.jpg" alt="Kitty" width="300" class="h-auto" id="previewImage"
+            class="cursor-pointer rounded-md">
+        <!-- Image -->
+    </div>
+    <div class="hidden fixed z-1  pt-24 left-0 top-0 w-[100%] h-[100%] overflow-auto bg-black bg-opacity-90" id="modal">
+        <span
+            class="absolute top-4 right-9 text-black font-bold font-4xl transition-[0.3s] m-auto block w-[80%] max-w-3xl ">X</span>
+        <img id="image">
+        <div id="caption"></div>
+    </div>
+</body>
+
+</html>
