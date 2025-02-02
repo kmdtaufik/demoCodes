@@ -22,6 +22,23 @@
                 <td style="border: 1px solid black"><a href="https://kmdtaufik.github.io/demoCodes/w3SchoolsHowTo/slideshowGallery/" target="_blank">SlideshowGallery</a></td>
                 <td style="border: 1px solid black"><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="_blank">SlideshowGallery</a></td>
             </tr>
+                        <tr>
+                <td style="border: 1px solid black"><a href="https://github.com/kmdtaufik/demoCodes/tree/main/w3SchoolsHowTo/lightbox" target="_blank">Code</a></td>
+                <td style="border: 1px solid black"><a href="https://kmdtaufik.github.io/demoCodes/w3SchoolsHowTo/lightbox/" target="_blank">SlideshowGallery</a></td>
+                <td style="border: 1px solid black"><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="_blank">lightbox</a></td>
+            </tr>            <tr>
+                <td style="border: 1px solid black"><a href="https://github.com/kmdtaufik/demoCodes/tree/main/w3SchoolsHowTo/responsiveImageGrid" target="_blank">Code</a></td>
+                <td style="border: 1px solid black"><a href="https://kmdtaufik.github.io/demoCodes/w3SchoolsHowTo/responsiveImageGrid/" target="_blank">responsiveImageGrid</a></td>
+                <td style="border: 1px solid black"><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="_blank">responsiveImageGrid</a></td>
+            </tr>            <tr>
+                <td style="border: 1px solid black"><a href="https://github.com/kmdtaufik/demoCodes/tree/main/w3SchoolsHowTo/imageGrid" target="_blank">Code</a></td>
+                <td style="border: 1px solid black"><a href="https://kmdtaufik.github.io/demoCodes/w3SchoolsHowTo/imageGrid/" target="_blank">imageGrid</a></td>
+                <td style="border: 1px solid black"><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="_blank">imageGrid</a></td>
+            </tr>            <tr>
+                <td style="border: 1px solid black"><a href="https://github.com/kmdtaufik/demoCodes/tree/main/w3SchoolsHowTo/imageGallery" target="_blank">Code</a></td>
+                <td style="border: 1px solid black"><a href="https://kmdtaufik.github.io/demoCodes/w3SchoolsHowTo/imageGallery/" target="_blank">imageGallery</a></td>
+                <td style="border: 1px solid black"><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp" target="_blank">imageGallery</a></td>
+            </tr>
         </table>
     </td>
     </tr>
