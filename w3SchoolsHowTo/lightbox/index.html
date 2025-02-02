@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Add Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-0 font-sans">
+    <h2 class="text-center text-2xl mb-4">Lightbox</h2>
+
+    <div class="flex flex-wrap -mx-2">
+      <div class="w-1/4 p-2">
+        <img
+          src="./img/5.png"
+          onclick="openModal();currentSlide(1)"
+          class="w-full hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+        />
+      </div>
+      <div class="w-1/4 p-2">
+        <img
+          src="./img/5.png"
+          onclick="openModal();currentSlide(2)"
+          class="w-full hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+        />
+      </div>
+      <div class="w-1/4 p-2">
+        <img
+          src="./img/5.png"
+          onclick="openModal();currentSlide(3)"
+          class="w-full hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+        />
+      </div>
+      <div class="w-1/4 p-2">
+        <img
+          src="./img/5.png"
+          onclick="openModal();currentSlide(4)"
+          class="w-full hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+        />
+      </div>
+    </div>
+
+    <div
+      id="myModal"
+      class="hidden fixed inset-0 z-50 pt-[100px] bg-black/90 overflow-auto"
+    >
+      <span
+        class="text-white absolute top-2.5 right-7 text-3xl font-bold cursor-pointer"
+        onclick="closeModal()"
+        >&times;</span
+      >
+      <div class="bg-white mx-auto p-0 w-[90%] max-w-[1200px] relative">
+        <div class="mySlides hidden">
+          <div class="text-white text-xs absolute top-0 px-3 py-2">1 / 4</div>
+          <img src="./img/5.png" class="w-full" />
+        </div>
+
+        <a
+          class="prev absolute top-1/2 -translate-y-1/2 p-4 text-white font-bold text-xl transition-colors duration-300 hover:bg-black/80 cursor-pointer select-none"
+          onclick="plusSlides(-1)"
+          >&#10094;</a
+        >
+        <a
+          class="next absolute top-1/2 -translate-y-1/2 p-4 text-white font-bold text-xl transition-colors duration-300 hover:bg-black/80 cursor-pointer right-0 select-none"
+          onclick="plusSlides(1)"
+          >&#10095;</a
+        >
+
+        <div class="bg-black text-white text-center px-4 py-2">
+          <p id="caption"></p>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-1/4 p-2">
+            <img
+              class="cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-300"
+              src="./img/5.png"
+              onclick="currentSlide(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="w-1/4 p-2">
+            <img
+              class="cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-300"
+              src="./img/5.png"
+              onclick="currentSlide(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="w-1/4 p-2">
+            <img
+              class="cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-300"
+              src="./img/5.png"
+              onclick="currentSlide(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+          <div class="w-1/4 p-2">
+            <img
+              class="cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-300"
+              src="./img/5.png"
+              onclick="currentSlide(1)"
+              alt="Nature and sunrise"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Open the Modal
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      // Close the Modal
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+  </body>
+</html>
