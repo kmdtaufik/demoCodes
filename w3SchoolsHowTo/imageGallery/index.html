@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-4">
+    <h2 class="text-2xl font-bold mb-2">Responsive Image Gallery</h2>
+    <h4 class="mb-4">Resize the browser window to see the effect.</h4>
+
+    <!-- Responsive Grid: 1 column (default), 2 columns on small screens, 4 columns on medium+ screens -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+      <!-- Gallery Item 1 -->
+      <div class="border border-gray-300 hover:border-gray-500">
+        <a target="_blank" href="./img/5.png">
+          <img src="./img/5.png" alt="Image 1" class="w-full h-auto" />
+        </a>
+        <div class="p-4 text-center">Add a description of the image here</div>
+      </div>
+      <!-- Gallery Item 2 -->
+      <div class="border border-gray-300 hover:border-gray-500">
+        <a target="_blank" href="./img/pexels-arts-1187079.jpg">
+          <img
+            src="./img/pexels-arts-1187079.jpg"
+            alt="Image 2"
+            class="w-full h-auto"
+          />
+        </a>
+        <div class="p-4 text-center">Add a description of the image here</div>
+      </div>
+      <!-- Gallery Item 3 -->
+      <div class="border border-gray-300 hover:border-gray-500">
+        <a target="_blank" href="./img/pexels-francesco-ungaro-2325447.jpg">
+          <img
+            src="./img/pexels-francesco-ungaro-2325447.jpg"
+            alt="Image 3"
+            class="w-full h-auto"
+          />
+        </a>
+        <div class="p-4 text-center">Add a description of the image here</div>
+      </div>
+      <!-- Gallery Item 4 (Reusing the first image) -->
+      <div class="border border-gray-300 hover:border-gray-500">
+        <a target="_blank" href="./img/5.png">
+          <img src="./img/5.png" alt="Image 4" class="w-full h-auto" />
+        </a>
+        <div class="p-4 text-center">Add a description of the image here</div>
+      </div>
+    </div>
+  </body>
+</html>
